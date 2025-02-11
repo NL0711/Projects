@@ -1,3 +1,6 @@
 [submodule "projects/airline-management"]
 	path = Java/airline-management
 	url = https://github.com/NL0711/Java_Project_airlinemanagementsystem.git
+[submodule "WebDev/frontend-mentor"]
+	path = WebDev/frontend-mentor
+	url = https://github.com/NL0711/frontend-mentor-challenges.git
