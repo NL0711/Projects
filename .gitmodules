@@ -1,3 +1,3 @@
 [submodule "projects/airline-management"]
-	path = projects/airline-management
+	path = Java/airline-management
 	url = https://github.com/NL0711/Java_Project_airlinemanagementsystem.git
