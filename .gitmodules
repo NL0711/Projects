@@ -4,3 +4,6 @@
 [submodule "WebDev/frontend-mentor"]
 	path = WebDev/frontend-mentor
 	url = https://github.com/NL0711/frontend-mentor-challenges.git
+[submodule "WebDev/Flask/quiz-app"]
+	path = WebDev/Flask/quiz-app
+	url = https://github.com/NL0711/Quiz-app-proj.git
