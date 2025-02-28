@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+  content="width=device-width, 
+  initial-scale=1.0">
+  <title>Contact Form</title>
+  <style>
+    body {
+      background-color: #111827;
+      padding-top: 4rem;
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    main {
+      display: grid;
+      place-items: center;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 18rem;
+      gap: 1rem;
+    }
+    input {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .bg-gray {
+      background-color: #e5e7eb;
+    }
+    .button {
+      padding: 0.5rem;
+      border: none;
+      border-radius: 4px;
+      background-color: #3b82f6;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #2563eb;
+    }
+    .contact-list {
+      width: 100%;
+      padding-top: 3rem;
+    }
+    .contact-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      background-color: #e5e7eb;
+      padding: 0.5rem;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+    .contact-item button {
+      margin-left: 1rem;
+      padding: 0.25rem 0.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .contact-item .delete {
+      background-color: #ef4444;
+      color: white;
+    }
+    .contact-item .edit {
+      background-color: #fbbf24;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <input id="name" type="text" 
+      placeholder="Enter Name">
+      <input id="email" type="email"
+      placeholder="Enter Email">
+      <input id="phone" type="number"
+      placeholder="Enter Phone Number">
+      <button class="button bg-gray"
+      onclick="addContact()">Add Contact</button>
+    </div>
+    <div class="contact-list" id="contactList">
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadContacts();
+    });
+
+    function addContact() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+
+      if (name && email && phone) {
+        const contact = { name, email, phone };
+        const contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+        contacts.push(contact);
+        localStorage.setItem('contacts', JSON.stringify(contacts));
+        displayContacts();
+        clearForm();
+      } else {
+        alert('All fields must be filled out.');
+      }
+    }
+
+    function displayContacts() {
+      const contactList = document.getElementById('contactList');
+      contactList.innerHTML = '';
+      const contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+
+      contacts.forEach((contact, index) => {
+        const contactItem = document.createElement('div');
+        contactItem.classList.add('contact-item');
+        contactItem.innerHTML = `
+          <span>${contact.name}</span>
+          <span>${contact.email}</span>
+          <span>${contact.phone}</span>
+          <button class="edit" onclick="editContact(${index})">Edit</button>
+          <button class="delete" onclick="deleteContact(${index})">Delete</button>
+        `;
+        contactList.appendChild(contactItem);
+      });
+    }
+
+    function editContact(index) {
+      const contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+      const contact = contacts[index];
+
+      document.getElementById('name').value = contact.name;
+      document.getElementById('email').value = contact.email;
+      document.getElementById('phone').value = contact.phone;
+
+      deleteContact(index);
+    }
+
+    function deleteContact(index) {
+      const contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+      contacts.splice(index, 1);
+      localStorage.setItem('contacts', JSON.stringify(contacts));
+      displayContacts();
+    }
+
+    function clearForm() {
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('phone').value = '';
+    }
+
+    function loadContacts() {
+      displayContacts();
+    }
+  </script>
+</body>
+</html>
