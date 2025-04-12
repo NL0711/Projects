@@ -16,3 +16,6 @@
 [submodule "Hackathons/codebreakers-kjsit-frontend"]
 	path = Hackathons/codebreakers-kjsit-frontend
 	url = https://github.com/NL0711/codebreakers-kjsit-frontend
+[submodule "Hackathons/mkdocs-spam-out"]
+	path = Hackathons/mkdocs-spam-out
+	url = https://github.com/NL0711/mkdocs-spam-out
