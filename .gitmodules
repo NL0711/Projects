@@ -13,3 +13,6 @@
 [submodule "WebDev/college-projects/college-event-management-website/college-event-management-backend"]
 	path = WebDev/college-projects/college-event-management-website/college-event-management-backend
 	url = https://github.com/NL0711/college-event-management-backend.git
+[submodule "Hackathons/codebreakers-kjsit-frontend"]
+	path = Hackathons/codebreakers-kjsit-frontend
+	url = https://github.com/NL0711/codebreakers-kjsit-frontend
