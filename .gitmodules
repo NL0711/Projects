@@ -16,3 +16,6 @@
 [submodule "WebDev/college-projects/SEB_EventFinder_NathashaLewis_10257"]
 	path = WebDev/college-projects/SEB_EventFinder_NathashaLewis_10257
 	url = https://github.com/NL0711/SEB_EventFinder_NathashaLewis_10257
+[submodule "Java/SpringBoot/postit-photos"]
+	path = Java/SpringBoot/postit-photos
+	url = https://github.com/NL0711/postit-photos
