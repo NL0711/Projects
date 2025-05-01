@@ -7,15 +7,12 @@
 [submodule "WebDev/Flask/quiz-app"]
 	path = WebDev/Flask/quiz-app
 	url = https://github.com/NL0711/Quiz-app-proj.git
-[submodule "WebDev/college-projects/college-event-management-website/college-event-management-frontend"]
-	path = WebDev/college-projects/college-event-management-website/college-event-management-frontend
-	url = https://github.com/NL0711/college-event-management-frontend.git
-[submodule "WebDev/college-projects/college-event-management-website/college-event-management-backend"]
-	path = WebDev/college-projects/college-event-management-website/college-event-management-backend
-	url = https://github.com/NL0711/college-event-management-backend.git
 [submodule "Hackathons/codebreakers-kjsit-frontend"]
 	path = Hackathons/codebreakers-kjsit-frontend
 	url = https://github.com/NL0711/codebreakers-kjsit-frontend
 [submodule "Hackathons/mkdocs-spam-out"]
 	path = Hackathons/mkdocs-spam-out
 	url = https://github.com/NL0711/mkdocs-spam-out
+[submodule "WebDev/college-projects/SEB_EventFinder_NathashaLewis_10257"]
+	path = WebDev/college-projects/SEB_EventFinder_NathashaLewis_10257
+	url = https://github.com/NL0711/SEB_EventFinder_NathashaLewis_10257
