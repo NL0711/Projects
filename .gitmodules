@@ -19,3 +19,6 @@
 [submodule "WebDev/college-projects/quiz-app-flask-proj"]
 	path = WebDev/college-projects/quiz-app-flask-proj
 	url = https://github.com/NL0711/quiz-app-flask-proj
+[submodule "WebDev/college-projects/kolam-mandala"]
+	path = WebDev/college-projects/kolam-mandala
+	url = https://github.com/NL0711/kolam-mandala
