@@ -16,3 +16,6 @@
 [submodule "Java/SpringBoot/postit-photos"]
 	path = Java/SpringBoot/postit-photos
 	url = https://github.com/NL0711/postit-photos
+[submodule "WebDev/quiz-app-flask-proj"]
+	path = WebDev/quiz-app-flask-proj
+	url = https://github.com/NL0711/quiz-app-flask-proj
